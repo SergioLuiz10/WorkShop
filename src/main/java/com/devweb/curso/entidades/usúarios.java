@@ -1,8 +1,12 @@
 package com.devweb.curso.entidades;
 
+import jakarta.persistence.Entity;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+
+@Entity
 public class usúarios implements Serializable {
     private Long Id;
     private String nome;
