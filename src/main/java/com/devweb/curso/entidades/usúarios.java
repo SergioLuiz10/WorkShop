@@ -1,13 +1,16 @@
 package com.devweb.curso.entidades;
 
-import jakarta.persistence.Entity;
-
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 
-@Entity
+@Entity    //especificando que é uma entidade para o banco de dados h2
+@Table(name = "tb_usuario")  //especificando o nome da tabela do banco de dados pra n da conflito com o nome da classe
 public class usúarios implements Serializable {
+
+    @jakarta.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     private String nome;
     private String email;
